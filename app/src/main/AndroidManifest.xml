@@ -8,14 +8,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/covidapp3"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/covidapp3"
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidHelp">
         <activity android:name=".HelpActivity"></activity>
         <activity android:name=".VaccineActivity" />
-        <activity android:name=".Interact" />
+        <activity
+            android:name=".Interact"
+            android:label="Connect with a volunteer." />
+        <activity
+            android:name=".VolunteerList"
+            android:label="@string/category_volunteerList" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
