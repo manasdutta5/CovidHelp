@@ -1,7 +1,7 @@
 # CovidHelp
 
-issues:
-    - Volunteer List Not working - *resolved in commit 1.1*
+- issues:
+    - Volunteer List Not working *resolved in commit 1.1*
     
 ### 1.1
 
