@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class VolunteerList extends AppCompatActivity {
-    ArrayList<Word> words = new ArrayList<Word>();
+    final ArrayList<Word> words = new ArrayList<Word>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,13 +64,15 @@ public class VolunteerList extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TextView num = findViewById(R.id.ddescription);
-                String number1 = num.getText().toString();
-                String number2 = number1.substring(number1.length()-10);
+                Word word = words.get(position);
+
+
+                String Description = word.getmDescription().toString();
+                String number = Description.substring(Description.length()-10);
 
                 Toast.makeText(VolunteerList.this,"Connecting the call",Toast.LENGTH_SHORT).show();
                 Intent callintent = new Intent(Intent.ACTION_DIAL);
-                callintent.setData(Uri.parse("tel:"+number2));
+                callintent.setData(Uri.parse("tel:"+number));
 
                 try{
                     startActivity(callintent);
